@@ -1,7 +1,8 @@
 .header
     .header__parent
         .header__parent__title
-            %p.title My recommendation 
+            =link_to root_path do
+                %p.title My recommendation 
             .sign_in
                 =link_to new_user_registration_path do
                     %p.login 新規登録
