@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .header{
-    border-bottom: 2px solid #f5f5f5;
     min-width: 1350px;
+    // position:fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    z-index: 1;
     &__parent{        
+        border-bottom: 2px solid #f5f5f5;
         background-color:white;;
         width:100%;
         text-align:center;
@@ -48,5 +53,18 @@
             border-radius: 3px;
             display: inline-block;
         }
+    }
+}
+h5{
+    padding-top:132px;
+}
+.account-page__inner.clearfix{
+    // margin-top:160px;
+}
+.header-bottom{
+    h5{
+        position:relative;
+        left:630px;
+        font-size: 23px;
     }
 }

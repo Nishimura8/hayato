@@ -1,0 +1,9 @@
+.header
+    .header__parent
+        .header__parent__title
+            %p.title My recommendation 
+            .sign_in
+                =link_to new_user_registration_path do
+                    %p.login 新規登録
+                =link_to user_registration_path,method: :delete do
+                    %p.logout ログアウト
