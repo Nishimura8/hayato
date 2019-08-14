@@ -1,38 +1,45 @@
-.main{
-    &__image{
-        height:450px;
-        width:840px;
-        margin:50px auto 50px;
-        box-shadow: 0 0 10px rgba(41,41,41,0.2);
-    }
-    &__title{
-        margin-top:100px;
-        .title2{
-            border-bottom: 1px solid #e3e3e3;
+.main-contents{
+    // box-shadow: 0 0 10px rgba(41,41,41,0.2);
+    background-color:black;
+    .main{
+        width:960px;
+        margin:0 auto;
+        background-color:white;
+        padding:50px 50px 0px;
+        &__image{
+            height:450px;
+            width:840px;
+            margin:50px auto 50px;
+            box-shadow: 0 0 10px rgba(41,41,41,0.2);
+        }
+        &__title{
+            .title2{
+                border-bottom: 1px solid #e3e3e3;
+                width:965px;
+                margin:0 auto;
+                font-weight:bold;
+                font-size:26px;
+                font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+            }
+        }
+        &__time{
             width:965px;
             margin:0 auto;
-            font-weight:bold;
-            font-size:26px;
-            font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+            color: #999999;
+            font-size:12px;
+            margin-top:15px;
         }
-    }
-    &__time{
-        width:965px;
-        margin:0 auto;
-        color: #999999;
-        font-size:12px;
-        margin-top:15px;
-    }
-    &__name{
-        width:965px;
-        margin:0 auto;
-        color: #999999;
-        font-size:12px;
-        margin-top:15px;
-    }
-    &__content{
-        width:965px;
-        margin:0 auto;
-        margin-top:30px;
+        &__name{
+            width:965px;
+            margin:0 auto;
+            color: #999999;
+            font-size:12px;
+            margin-top:15px;
+        }
+        &__content{
+            width:965px;
+            margin:0 auto;
+            margin-top:30px;
+        }
     }
 }
