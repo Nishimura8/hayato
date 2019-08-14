@@ -76,9 +76,33 @@ a{
     margin-top:50px;
     &__recommended{
         width: 380px;
-        min-height: 330px;
+        min-height: 300px;
         float: left;
         margin: 10px;
-        background-color: #000;
+        background-color:black;
+        box-shadow: 0 0 10px rgba(41,41,41,0.2);
+        &__title{
+            display:flex;
+        }
+        &__contributor{
+            display:flex;
+            margin-top:10px;
+            margin-left:100px;
+            .name{
+                margin-left:15px;
+            }
+        }
     }
+}
+.title{
+    color:white;;
+    font-weight:normal;
+    padding-top:10px;
+    padding-left:10px;
+}
+.name{
+    color:white;
+}
+.contributor{
+    color:white;
 }

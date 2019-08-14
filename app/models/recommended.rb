@@ -1,3 +1,3 @@
 class Recommended < ApplicationRecord
-    has_many :recommendeds
+    belongs_to :user
 end

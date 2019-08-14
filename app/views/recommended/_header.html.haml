@@ -6,5 +6,5 @@
             .sign_in
                 =link_to new_user_registration_path do
                     %p.login 新規登録
-                =link_to user_registration_path,method: :delete do
+                =link_to destroy_user_session_path,method: :delete do
                     %p.logout ログアウト
