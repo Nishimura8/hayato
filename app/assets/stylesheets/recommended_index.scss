@@ -11,10 +11,11 @@
     &__parent{     
         position:relative;   
         // background-color:black;
-        border-bottom: 1px solid #e3e3e3;
+        // border-bottom: 1px solid #e3e3e3;
         width:100%;
         text-align:center;
         position:relative;
+        background-color:black;
         &__title{
             margin:0 auto ;
             height:100px;
@@ -31,7 +32,7 @@
        font-weight:bold;
         position:absolute;
         top:30px;
-        right:60px;
+        right:120px;
         .login{
             color:#66aff3;
             padding: 8px 20px;
@@ -71,15 +72,16 @@ a{
     text-decoration: none;
 }
 .contents{
+    border-top: 1px solid #e3e3e3;
     width:1200px;
     margin:0 auto;
-    margin-top:50px;
+    padding-top:50px;
     &__recommended{
+        background-color:white;
         width: 380px;
         min-height: 300px;
         float: left;
         margin: 10px;
-        background-color:black;
         box-shadow: 0 0 10px rgba(41,41,41,0.2);
         font-family: "MS PGothic", "Osaka", Arial, sans-serif;
         &__title{
@@ -101,15 +103,12 @@ a{
     }
 }
 .title{
-    color:white;;
     font-weight:normal;
     padding-top:10px;
     padding-left:10px;
 }
 .name{
-    color:white;
 
 }
 .contributor{
-    color:white;
 }
