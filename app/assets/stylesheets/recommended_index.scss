@@ -87,6 +87,7 @@ a{
         font-family: "MS PGothic", "Osaka", Arial, sans-serif;
         &__title{
             // display:flex;
+            clear:both;
             p{
                 float:left;
             }
@@ -97,6 +98,7 @@ a{
             margin-top:10px;
             margin-left:50px;
             .name{
+                clear:both;
                 margin-left:15px;
                 padding-right:10px;
             }
@@ -106,6 +108,8 @@ a{
                 margin-top:15px;
                 padding-right:10px;
                 color: #999999;
+                text-align: right;
+                width:205px;
             }
         }
     }
