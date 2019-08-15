@@ -66,3 +66,5 @@ gem 'pry-rails'
 gem 'devise'
 gem 'erb2haml'
 gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'mini_magick'
