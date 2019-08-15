@@ -1,6 +1,6 @@
 class RecommendedController < ApplicationController
     def index
-        @reco = Recommended.all
+        @recommended= Recommended.all
     end
 
     def new
@@ -19,5 +19,10 @@ class RecommendedController < ApplicationController
     def show
         @recommended = Recommended.find(params[:id])
         @user = @recommended.user
+    end
+
+    private
+    def recommended_params
+        params.require(:recommended).permit(:image, :title,:content, ).merge(user_id: current_user.id)
     end
 end
