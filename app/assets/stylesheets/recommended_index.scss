@@ -81,15 +81,21 @@ a{
         margin: 10px;
         background-color:black;
         box-shadow: 0 0 10px rgba(41,41,41,0.2);
+        font-family: "MS PGothic", "Osaka", Arial, sans-serif;
         &__title{
-            display:flex;
+            // display:flex;
+            p{
+                float:left;
+            }
         }
         &__contributor{
+            float:right;
             display:flex;
             margin-top:10px;
             margin-left:100px;
             .name{
                 margin-left:15px;
+                padding-right:10px;
             }
         }
     }
@@ -102,6 +108,7 @@ a{
 }
 .name{
     color:white;
+
 }
 .contributor{
     color:white;
