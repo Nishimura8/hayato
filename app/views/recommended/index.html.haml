@@ -1,13 +1,15 @@
 .wrapper
     = render "recommended/header"
-    .contents
-        - @recommended.each do |reco|
-            .contents__recommended
-                = link_to recommended_path(2) do
-                    =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
-                .contents__recommended__title
-                    %p.title 
-                        = reco.content
-                    .contents__recommended__contributor
-                        %span.contributor 投稿者
-                        %p.name 西村
+    .main-contents
+        .contents
+            - @recommended.each do |reco|
+                .contents__recommended
+                    = link_to recommended_path(reco.id) do
+                        =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
+                    .contents__recommended__title
+                        %p.title 
+                            = reco.title
+                        .contents__recommended__contributor
+                            %span.contributor 投稿者
+                            %p.name 
+                                = reco.user.name
