@@ -77,6 +77,7 @@ a{
     margin:0 auto;
     padding-top:50px;
     &__recommended{
+        font-size:14px;
         background-color:white;
         width: 380px;
         min-height: 300px;
@@ -107,8 +108,20 @@ a{
     padding-top:10px;
     padding-left:10px;
 }
-.name{
-
-}
-.contributor{
+.post{
+    font-weight:bold;
+    &__btn{
+    color:#66aff3;
+    padding: 8px 20px;
+    font-size: 14px;
+    border: 2px solid #66aff3;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right:20px;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    }
 }
