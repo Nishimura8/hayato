@@ -1,12 +1,14 @@
 .account-page {
   .account-page__inner {
+    box-shadow: 0 0 10px rgba(41,41,41,0.2);
     width: 650px;
     margin: 0px auto 60px;
     padding: 60px;
-    background-color:snow;
+    background-color:black;
     border: 1px solid #ddd;
+    color:white;
     border-radius: 5px;
-
+    background-color: #1f1f1f;
     .account-page__inner--left, .account-page__inner--right {
       width: 70%;
       margin: 0 auto;
