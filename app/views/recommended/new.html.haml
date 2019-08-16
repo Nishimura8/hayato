@@ -1,27 +1,25 @@
 = render "recommended/header"
 .main
-  .main-buy-item
+  .main-post
     =form_with model: @recommended, url: recommended_index_path do |f|
-      .main-buy-item__container
-        %h2.main-buy-item__container__head 投稿内容を入力
-        %form.main-buy-item__container__form
-          .main-buy-item__container__form__box
+      .main-post__container
+        %h2.main-post__container__head 投稿内容を入力
+        %form.main-post__container__form
+          .main-post__container__form__box
           %p 画像を選択してください
         = f.file_field :image
-        .main-buy-item__container-product-datails
-          .main-buy-item__container-product-datails__form
+        .main-post__container__title
+          .main-buy-item__container-title__form
             %h3
               タイトル
-            = f.text_field :title, class: 'item_name', placeholder: 'タイトルを入力してください(40字まで)'
-          .main-buy-item__container-product-datails__description
+            = f.text_field :title, class: 'titl', placeholder: 'タイトルを入力してください(10字まで)'
+          .main-post__container__title__content
             %h3
               記事の内容
-            = f.text_area :content, class: 'item_datail', placeholder: "記事の内容を入力してください(1000字まで)"
-        .main-buy-item__container-product-condition
-          .main-buy-item__container-product-condition__state
-        .main-buy-item__container-product-condition__delivery
-          %h3.main-buy-item__container-product-condition__delivery__sub
+            = f.text_area :content, class: 'content', placeholder: "記事の内容を入力してください(1000字まで)"
+        .main-post__container__submit
+          %h3.main-post__container__submit__sub
             = f.submit "投稿する",class: "btn-red"
-            .btn-default.btn-gray
+            .main-post__container__submit__back
             =link_to '戻る', root_path, class:"gray"
     
