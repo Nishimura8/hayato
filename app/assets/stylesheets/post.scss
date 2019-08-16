@@ -1,0 +1,64 @@
+.main-post{
+    background-color:#1f1f1f;
+    &__container{
+        &__box{
+            margin:0 auto;
+            width:1300px;
+            height:125px;
+            &__head{
+                padding:40px 21px 39px 30px;
+                font-size:30px;
+                background-color: #1f1f1f;
+                color:white;
+                border-bottom: 3px solid #444444;
+            }
+        }
+        &__picture{
+            &__form{
+                padding: 40px 0;
+                width:980px;
+                margin:0 auto;
+                background-color: #1f1f1f;
+                color:white;
+                border-bottom: 1px solid #444444;
+            }
+        }
+        &__title{
+            padding:40px 0;
+            width:980px;
+            margin:0 auto;
+            background-color:#1f1f1f;
+            color:white;
+            border-bottom: 1px solid #444444;
+            &__content{
+                margin-top:10px;
+                .content{
+                margin-top:5px;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                min-height: 104px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background: #fff;
+                font-size: 16px;
+                line-height: 1.5;
+                box-sizing:border-box;
+                }
+            }
+        }
+        &__submit{
+            width:980px;
+            margin:0 auto;
+            background-color:#1f1f1f;
+        }
+    }
+}
+.main-buy-item__container-title__form{
+    .titl{
+    width: 100%;
+    padding:10px 16px 8px 16px;
+    margin-top:5px;
+    box-sizing:border-box;
+    }
+}
