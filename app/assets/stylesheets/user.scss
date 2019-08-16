@@ -1,9 +1,9 @@
 .account-page {
   .account-page__inner {
     width: 650px;
-    margin: 60px auto;
+    margin: 0px auto 60px;
     padding: 60px;
-    background-color:#f0f0f0;
+    background-color:snow;
     border: 1px solid #ddd;
     border-radius: 5px;
 
@@ -143,4 +143,12 @@
 }
 .actions{
   margin:0 auto;
+}
+.a{
+  height:100%;
+  background-color:black;
+}
+.b{
+  height:60px;
+  background-color:black;
 }
