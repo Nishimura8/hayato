@@ -3,11 +3,18 @@
         .header__parent__title
             =link_to root_path do
                 %p.title My recommendation 
-            .post
-                =link_to new_recommended_path do
-                    %p.post__btn 投稿する
-            .sign_in
-                =link_to new_user_registration_path do
-                    %p.login 新規登録
-                =link_to destroy_user_session_path,method: :delete do
-                    %p.logout ログアウト
+            - if user_signed_in?
+                .post
+                    =link_to new_recommended_path do
+                        %p.post__btn 投稿する
+                .sign_in
+                    =link_to "" do
+                        %p.login マイページ
+                    =link_to destroy_user_session_path,method: :delete do
+                        %p.logout ログアウト
+            -else 
+                .sign_in
+                    =link_to new_user_registration_path do
+                        %p.login 新規登録
+                    =link_to user_session_path do
+                        %p.logout ログイン

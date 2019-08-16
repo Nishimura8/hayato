@@ -1,4 +1,5 @@
 .main-post{
+    min-width:1440px;
     background-color:#1f1f1f;
     &__container{
         &__box{
@@ -10,7 +11,7 @@
                 font-size:30px;
                 background-color: #1f1f1f;
                 color:white;
-                border-bottom: 3px solid #444444;
+                border-bottom: 1px solid #444444;
             }
         }
         &__picture{
