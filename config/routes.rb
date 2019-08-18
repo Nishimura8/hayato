@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :recommended,only: [:show,:new,:create] do
     resources :review,only: [:new,:create]
   end
+  post   '/like/:recommended_id' => 'likes#like',   as: 'like'
+  delete '/like/:recommended_id' => 'likes#unlike', as: 'unlike'
 end

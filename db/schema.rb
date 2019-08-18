@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_17_043404) do
+ActiveRecord::Schema.define(version: 2019_08_18_054639) do
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "recommended_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "recommendeds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -19,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_08_17_043404) do
     t.bigint "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "likes_count"
     t.index ["user_id"], name: "index_recommendeds_on_user_id"
   end
 
