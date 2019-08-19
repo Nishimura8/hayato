@@ -19,6 +19,8 @@ class RecommendedController < ApplicationController
     def show
         @recommended = Recommended.find(params[:id])
         @user = @recommended.user
+        @comment = Comment.new #①
+        @comments = @recommended.comments #②
     end
 
     private

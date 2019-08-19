@@ -8,4 +8,6 @@ class User < ApplicationRecord
          has_many :reviews
          has_many :likes, dependent: :destroy
          has_many :like_recommendeds, through: :likes, source: :recommended
+         has_many :recommendeds, dependent: :destroy
+         has_many :comments, dependent: :destroy
 end

@@ -12,33 +12,15 @@
         .main__content
             %p.item-description-inner 
                 = safe_join(@recommended.content.split("\n"), tag(:br))
-            -# この前主人と行って旅行に行った時に訪れた街の写真です。
-            -# 筋トレだけしても栄養が足りてないと筋肉は増えませんし、
-            -# 食事だけしても筋肉に刺激が入っていなかったら筋肉が増えません。
-            -# %br
-            -# %br
-            -# ですので筋肉を増やすには筋トレも栄養も必要です。
-            -# よくある間違えに筋トレだけしてる人、プロテインだけ飲んでる人がいますが、
-            -# そんなことをしてても筋肉は増えません。
-            -# %br
-            -# %br
-            -# 筋肉はキッチンで作られるという言葉があるぐらいです。
-            -# 筋肉の栄養はタンパク質です。
-            -# %br
-            -# %br
-            -# これと同じで
-
-            -# ダイエットをするには筋トレだけしたら痩せるのか？
-            -# %br
-            -# %br
-            -# といえばそうではありません。
-            -# %br
-            -# 痩せる為には食事制限することです。
-            -# %br
-            -# %br
-    
-            -# 実際、効果は食事８割運動２割程度です。
-            -# 食事だけでも痩せることはできますが、
         .main__image
             = image_tag @recommended.image.url,size: "840x450"
         = render partial: 'recommended/recommendeds'
+        %div
+            %h4 コメント
+            #comments_area
+                / #①
+                / 投稿されたコメント一覧をブログの詳細ページに表示するためのrender
+                = render partial: 'comments/index', locals: { comments: @comments }
+            - if user_signed_in?
+                / コメント入力欄をブログの詳細ページに表示するためのrender
+                = render partial: 'comments/form', locals: { comment: @comment, post: @recommended }
