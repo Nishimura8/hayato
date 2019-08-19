@@ -8,4 +8,7 @@
       = link_to like_path(story.id), method: :post, remote: true do
         .iine__button
           ♡️#{story.likes.count}
-        
+  -else
+    .iine__button
+      ❤️#{story.likes.count}
+      
