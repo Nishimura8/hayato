@@ -162,13 +162,15 @@
   min-width:1440px;
 }
 .iine__button{
-  background: linear-gradient(to right, #feb400, #FFE300);
+  background: linear-gradient(to right, black, gray);
   line-height: 42px;
-  color: #6d3701;
+  color: white;
   font-size: 14px;
   display: inline-block;
   padding: 0 18px;
   border-radius: 100px;
   font-weight: bold;
   margin-right:65px;
+  margin-left:1px;
+  margin-top:2px;
 }
