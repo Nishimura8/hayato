@@ -4,11 +4,16 @@
       = link_to unlike_path(story.id), method: :delete, remote: true do
         .iine__button
           ❤️#{story.likes.count}
+        %p.like
+          いいね
     - else
       = link_to like_path(story.id), method: :post, remote: true do
         .iine__button
           ♡️#{story.likes.count}
+        %p.like
+          いいね
   -else
     .iine__button
       ❤️#{story.likes.count}
-      
+    %p.like
+      いいね
