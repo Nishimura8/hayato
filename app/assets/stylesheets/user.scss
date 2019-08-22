@@ -175,16 +175,16 @@
   margin-top:2px;
 }
 .img-box{
-  overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
-	width: 380px;	/*画像の幅*/
-  height: 210px;	/*画像の高さ*/
+  overflow: hidden;	
+	width: 380px;	
+  height: 210px;	
   img{
   	display: block;
-  transition-duration: 0.6s;	/*変化に掛かる時間*/
+  transition-duration: 1.0s;	
   }
   img:hover {
-    transform: scale(1.1);	/*画像の拡大率*/
-    transition-duration: 0.6s;	/*変化に掛かる時間*/
+    transform: scale(1.1);	
+    transition-duration: 1.0s;	
   }
 }
 
