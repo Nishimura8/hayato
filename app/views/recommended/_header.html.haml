@@ -4,14 +4,15 @@
             =link_to root_path do
                 %p.title My recommendation 
             - if user_signed_in?
-                .post
-                    =link_to new_recommended_path do
-                        %p.post__btn 投稿する
                 .sign_in
                     =link_to "" do
                         %p.login マイページ
                     =link_to destroy_user_session_path,method: :delete do
                         %p.logout ログアウト
+                .post
+                    =link_to new_recommended_path do
+                        %p.post__btn 投稿する
+                = render "recommended/index"
             -else 
                 .sign_in
                     =link_to new_user_registration_path do

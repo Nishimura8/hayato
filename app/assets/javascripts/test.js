@@ -1,8 +1,10 @@
 $(function() {
-    var card = $(".main__image");
-    card.on("click",function(){
-        var img = $(this).find("img");
-        img.css("opacity","0.5");
+    var nav = $('.nav');
+    $('li', nav)
+    .mouseover(function(e) {
+    $('ul', this).stop().slideDown('fast');
     })
-})
-
+    .mouseout(function(e) {
+    $('ul', this).stop().slideUp('fast');
+    });
+    });
