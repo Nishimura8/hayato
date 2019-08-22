@@ -22,6 +22,16 @@ class RecommendedController < ApplicationController
         @comment = Comment.new #①
         @comments = @recommended.comments #②
     end
+    
+    def sports
+    end
+
+    def travel
+    end
+
+    def fashion
+    end
+
 
     private
     def recommended_params

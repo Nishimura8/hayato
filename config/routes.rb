@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   end
   post   '/like/:recommended_id' => 'likes#like',   as: 'like'
   delete '/like/:recommended_id' => 'likes#unlike', as: 'unlike'
+  get '/sports' => 'recommended#sports'
+  get '/travel' => 'recommended#travel'
+  get '/chat' => 'recommended#chat'
+  get '/fashion' => 'recommended#fashion'
 end
