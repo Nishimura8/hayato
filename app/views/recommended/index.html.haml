@@ -4,8 +4,9 @@
         .contents
             - @recommended.each do |reco|
                 .contents__recommended
-                    = link_to recommended_path(reco.id) do
-                        =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
+                    .img-box
+                        = link_to recommended_path(reco.id) do
+                            =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
                     .contents__recommended__title
                         %p.title 
                             = reco.title
