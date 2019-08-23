@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get '/chat' => 'recommended#chat'
   get '/fashion' => 'recommended#fashion'
   resources :clips, only: [:destroy]
+  get '/mypage/:id',to: "recommended#mypage"
 end

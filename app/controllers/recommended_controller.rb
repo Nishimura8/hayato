@@ -23,6 +23,11 @@ class RecommendedController < ApplicationController
         @comment = Comment.new #①
         @comments = @recommended.comments #②
     end
+
+    def mypage
+        @recommended = Recommended.where(user_id: current_user.id,).order("created_at DESC")
+        @user =current_user.name
+    end
     
     def sports
     end
