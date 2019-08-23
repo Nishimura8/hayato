@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/fashion' => 'recommended#fashion'
   resources :clips, only: [:destroy]
   get '/mypage/:id',to: "recommended#mypage"
+  get 
 end

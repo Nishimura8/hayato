@@ -238,12 +238,16 @@
   box-sizing: border-box;
 }
 .aa{
-  display:flex;
   font-size:20px;
   text-align:center;
   background-color:black;
   color:white;
+  text-align:center;
   position:relative;
-  left:500px;
-  bottom:20px;
+  bottom:25px;
+  .p{
+    position:absolute;
+    
+
+  }
 }
