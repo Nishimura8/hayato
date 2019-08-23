@@ -10,4 +10,6 @@ class User < ApplicationRecord
          has_many :like_recommendeds, through: :likes, source: :recommended
          has_many :recommendeds, dependent: :destroy
          has_many :comments, dependent: :destroy
+         has_many :clips, dependent: :destroy #この行を追記することで関連付くイベントが削除されるとclipも削除されます。
+         has_many :recommendeds, through: :clips
 end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :recommended,only: [:show,:new,:create] do
     resources :comments
     resources :review,only: [:new,:create]
+    post "add", to: "clips#create"
   end
   post   '/like/:recommended_id' => 'likes#like',   as: 'like'
   delete '/like/:recommended_id' => 'likes#unlike', as: 'unlike'
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
   get '/travel' => 'recommended#travel'
   get '/chat' => 'recommended#chat'
   get '/fashion' => 'recommended#fashion'
+  resources :clips, only: [:destroy]
 end

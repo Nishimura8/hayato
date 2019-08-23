@@ -6,4 +6,6 @@ class Recommended < ApplicationRecord
     has_many :liking_users, through: :likes, source: :user
     belongs_to :user
     has_many :comments, dependent: :destroy
+    has_many :clips
+    has_many :users, through: :clips
 end

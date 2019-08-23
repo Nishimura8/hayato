@@ -24,3 +24,8 @@
             - if user_signed_in?
                 / コメント入力欄をブログの詳細ページに表示するためのrender
                 = render partial: 'comments/form', locals: { comment: @comment, post: @recommended }
+                %div
+                    = link_to "このイベントをクリップ",recommended_add_path(@recommended.id), method: :post
+                %div
+                    = link_to "このイベントを削除", clip_path(@recommended.id), method: :delete
+
