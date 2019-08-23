@@ -1,6 +1,10 @@
 class ClipsController < ApplicationController
     before_action :set,only: :create
     before_action :set2,only: :destroy
+    def index
+       @recommended = current_user.recommendeds
+    end
+
     def create
 
    
@@ -17,7 +21,7 @@ class ClipsController < ApplicationController
       def destroy
         @clip = current_user.clips.find_by(recommended_id: @recommended.id)
         if @clip.destroy
-          redirect_to user_path(current_user)
+          redirect_to root_path
         end
       end
       

@@ -194,7 +194,7 @@
   margin-left:200px;
   position:relative;
   bottom:60px;
-    
+  z-index: 1;
 }
 .nav li {
   list-style: none;
@@ -250,4 +250,15 @@
     
 
   }
+}
+.favorite{
+  color: #66aff3;
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #66aff3;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 20px;
 }
