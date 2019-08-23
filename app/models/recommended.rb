@@ -1,4 +1,5 @@
 class Recommended < ApplicationRecord
+    extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :user
     mount_uploader :image, ImageUploader
     has_many :reviews
@@ -8,4 +9,5 @@ class Recommended < ApplicationRecord
     has_many :comments, dependent: :destroy
     has_many :clips
     has_many :users, through: :clips
+    belongs_to_active_hash :category
 end

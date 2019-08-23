@@ -17,6 +17,9 @@
             %h3
               記事の内容
             = f.text_area :content, class: 'content', placeholder: "記事の内容を入力してください(1000字まで)"
+            %h3
+              カテゴリー
+            = f.collection_select :category_id, Category.all, :id, :name, prompt: "--", class: 'input'
         .main-post__container__submit
           %h3.main-post__container__submit__sub
             = f.submit "投稿する",class: "btn2"

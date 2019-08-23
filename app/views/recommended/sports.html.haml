@@ -1,1 +1,20 @@
-スポーツ
+.wrapper
+    = render "recommended/header"
+    .main-contents2
+        .contents
+            - @recommended.each do |reco|
+                .contents__recommended
+                    .img-box
+                        = link_to recommended_path(reco.id) do
+                            =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
+                    .contents__recommended__title
+                        %p.title 
+                            = reco.title
+                        .contents__recommended__contributor
+                            %span.contributor 投稿者
+                            %p.name 
+                                = reco.user.name
+                        .contents__recommended__contributor__time
+                            = reco.created_at.strftime("%Y-%m-%d %H:%M")
+                        .iine__button
+                            👍#{reco.likes.count}

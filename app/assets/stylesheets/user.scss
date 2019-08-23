@@ -262,3 +262,14 @@
   display: inline-block;
   margin-right: 20px;
 }
+#recommended_category_id{
+  position: relative;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    background-color:white;
+}

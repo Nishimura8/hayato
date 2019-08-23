@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   get '/travel' => 'recommended#travel'
   get '/chat' => 'recommended#chat'
   get '/fashion' => 'recommended#fashion'
+  get '/entertainment' => 'recommended#entertainment'
+  get '/life' => 'recommended#life'
+  get '/love' => 'recommended#love'
+  get '/gourmet' => 'recommended#gourmet'
+  get '/hobby' => 'recommended#hobby'
+  get '/game' => 'recommended#game'
   resources :clips, only: [:destroy]
   get '/mypage/:id',to: "recommended#mypage"
   get '/favorite/:id',to: "clips#index"
