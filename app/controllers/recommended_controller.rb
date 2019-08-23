@@ -1,6 +1,7 @@
 class RecommendedController < ApplicationController
     def index
         @recommended= Recommended.order("created_at DESC")
+        # @recommended = current_user.recommendeds
       end
 
     def new
