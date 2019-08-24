@@ -5,6 +5,7 @@ class CreateRecommendeds < ActiveRecord::Migration[5.2]
       t.text        :content
       t.text        :image
       t.references :user, foreign_key: true
+      t.integer :category_id
       t.timestamps null: true
     end
   end

@@ -273,3 +273,14 @@
     cursor: pointer;
     background-color:white;
 }
+.category{
+  float: right;
+  margin-right: 10px;
+  position: relative;
+  bottom: 10px;
+  font-size:12px;
+  color: #1d2750c2;
+  span{
+    margin-right:1px;
+  }
+}

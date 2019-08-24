@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_023558) do
     t.text "content"
     t.text "image"
     t.bigint "user_id"
+    t.integer "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "likes_count"
