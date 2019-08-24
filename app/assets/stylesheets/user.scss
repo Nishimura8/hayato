@@ -284,3 +284,13 @@
     margin-right:1px;
   }
 }
+.pagination{
+  position:relative;
+  background-color:black;
+  color:white;
+  span{
+    a{
+      color:white;
+    }
+  }
+}
