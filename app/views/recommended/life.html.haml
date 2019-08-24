@@ -18,3 +18,5 @@
                             = reco.created_at.strftime("%Y-%m-%d %H:%M")
                         .iine__button
                             👍#{reco.likes.count}
+    .page
+        = paginate(@recommended)

@@ -2,7 +2,7 @@ class ClipsController < ApplicationController
     before_action :set,only: :create
     before_action :set2,only: :destroy
     def index
-       @recommended = current_user.recommendeds.order("created_at DESC")
+       @recommended = current_user.recommendeds.order("created_at DESC").page(params[:page]).per(9)
        @user =current_user.name
     end
 
