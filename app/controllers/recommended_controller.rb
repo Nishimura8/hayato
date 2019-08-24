@@ -1,6 +1,6 @@
 class RecommendedController < ApplicationController
     def index
-        @recommended= Recommended.order("created_at DESC").page(params[:page]).per(21)
+        @recommended= Recommended.order("created_at DESC").page(params[:page]).per(9)
         # @recommended = current_user.recommendeds
       end
 
