@@ -1,4 +1,5 @@
 class RecommendedController < ApplicationController
+    before_action :set_recommended ,only: [:edit,:update,:destroy,:show]
     def index
         @recommended= Recommended.order("created_at DESC").page(params[:page]).per(9)
         # @recommended = current_user.recommendeds
@@ -17,6 +18,28 @@ class RecommendedController < ApplicationController
     end
     end
 
+
+  def edit
+    @recommended = Recommended.find(params[:id])
+  end
+
+  def update
+    @recommended = Recommended.find(params[:id])
+    redirect_to root_path if @recommended.user_id != current_user.id
+    if @recommended.update(recommended_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @recommended = Recommended.find(params[:id])
+    if @recommended.user_id == current_user.id
+      @recommended.destroy
+      redirect_to root_path
+    end
+  end
     def show
         @recommended = Recommended.find(params[:id])
         @user = @recommended.user
@@ -68,6 +91,11 @@ class RecommendedController < ApplicationController
     def game
         @recommended = Recommended.where(category_id: 10).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
     end
+
+    def set_recommended
+        @recommended = Recommended.find(params[:id])
+    end
+        
 
 
 

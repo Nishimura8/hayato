@@ -1,0 +1,27 @@
+.main
+  .main-post
+    =form_with model: @recommended, url: recommended_path,methodo: :patch do |f|
+      .main-post__container
+        .main-post__container__box
+          %h2.main-post__container__box__head 投稿内容を入力
+        %form.main-post__container__picture
+          .main-post__container__picture__form
+            %p.picture 画像を選択してください
+            = f.file_field :image,class: 'picuture-form'
+        .main-post__container__title
+          .main-buy-item__container-title__form
+            %h3
+              タイトル
+            = f.text_field :title, class: 'titl', placeholder: 'タイトルを入力してください(10字まで)'
+          .main-post__container__title__content
+            %h3
+              記事の内容
+            = f.text_area :content, class: 'content', placeholder: "記事の内容を入力してください(1000字まで)"
+            %h3
+              ジャンル
+            = f.collection_select :category_id, Category.all, :id, :name, prompt: "--", class: 'input'
+        .main-post__container__submit
+          %h3.main-post__container__submit__sub
+            = f.submit "投稿する",class: "btn2"
+            .main-post__container__submit__back
+              =link_to '戻る', root_path, class:"back"

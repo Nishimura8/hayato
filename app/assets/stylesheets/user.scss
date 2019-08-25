@@ -302,10 +302,11 @@
 .submit{
 margin-top: 10px;
 height: 50px;
-width: 200px;
+width: 600px;
 background-color: #d7dbe2;
 color: #686c73;
 box-shadow: 0px 2px 0px 0px #a8b0c0;
+margin-right:42px;
 }
 .comments-user{
   list-style:none;
@@ -336,7 +337,7 @@ box-shadow: 0px 2px 0px 0px #a8b0c0;
   width:960px;
   margin:0 auto;
   .action{
-    width:300px;
+    width:600px;
     margin:0 auto;
   }
 }
@@ -347,4 +348,32 @@ box-shadow: 0px 2px 0px 0px #a8b0c0;
   a{
     color:black;
   }
+}
+.edit-btn{
+  margin-left:250px;
+  height:50px;
+  width:20%;
+  background-color:red;
+  line-height:50px;
+  text-align:center;
+  box-shadow: 0px 2px 0px 0px #770909;
+  a{
+    color:white;
+  }
+}
+.destroy-btn{
+  margin-left:60px;
+  height:50px;
+  width:20%;
+  background-color:red;
+  line-height:50px;
+  text-align:center;
+  box-shadow: 0px 2px 0px 0px #770909;
+  a{
+    color:white;
+  }
+}
+.btn-box{
+  display:flex;
+  margin-bottom:10px;
 }
