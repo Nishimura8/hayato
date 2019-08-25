@@ -1,6 +1,6 @@
 class RecommendedController < ApplicationController
     before_action :set_recommended ,only: [:edit,:update,:destroy,:show]
-    before_action :authenticate_user!, except: [:mypage,:show,:index]
+    before_action :authenticate_user!, except: [:sports,:travel,:chat,:love,:hobby,:life,:travel,:gourmet,:game,:fashion,:entertainment,:mypage,:show,:index]
     def index
         @recommended= Recommended.order("created_at DESC").page(params[:page]).per(9)
         # @recommended = current_user.recommendeds
@@ -100,7 +100,7 @@ class RecommendedController < ApplicationController
     def set_recommended
         @recommended = Recommended.find(params[:id])
     end
-    
+
     def recommended_params
         params.require(:recommended).permit(:image, :title,:content,:category_id ).merge(user_id: current_user.id)
     end
