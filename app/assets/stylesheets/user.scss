@@ -295,7 +295,7 @@
   }
 }
 #comment_content{
-  width: 600px;
+  width: 960px;
   height: 300px;
   margin-top:10px;
 }
@@ -331,4 +331,20 @@ box-shadow: 0px 2px 0px 0px #a8b0c0;
   font-size: 20px;
   border-bottom: 3px solid #d7dbe2;
   margin-top:20px;
+}
+.comments-box{
+  width:960px;
+  margin:0 auto;
+  .action{
+    width:300px;
+    margin:0 auto;
+  }
+}
+.favorite-box{
+  position:relative;
+  right:40px;
+  top:50px;
+  a{
+    color:black;
+  }
 }

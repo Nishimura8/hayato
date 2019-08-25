@@ -21,8 +21,9 @@
                 = render partial: 'comments/index', locals: { comments: @comments }
             - if user_signed_in?
                 = render partial: 'comments/form', locals: { comment: @comment, post: @recommended }
-                %div
-                    = link_to "お気に入りに追加する",recommended_add_path(@recommended.id), method: :post
-                %div
-                    = link_to "お気に入りから外す", clip_path(@recommended.id), method: :delete
+                .favorite-box
+                    .append
+                        = link_to "お気に入りに追加する",recommended_add_path(@recommended.id), method: :post
+                    .cancel
+                        = link_to "お気に入りから外す", clip_path(@recommended.id), method: :delete
 
