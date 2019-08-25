@@ -48,8 +48,8 @@ class RecommendedController < ApplicationController
     end
 
     def mypage
-        @recommended = Recommended.where(user_id: current_user.id,).order("created_at DESC").page(params[:page]).per(9)
-        @user =current_user.name
+        @user = User.find(params[:id])
+        @recommended = Recommended.where(user_id: @user.id,).order("created_at DESC").page(params[:page]).per(9)
     end
     
     def sports

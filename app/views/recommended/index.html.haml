@@ -12,8 +12,9 @@
                             = reco.title
                         .contents__recommended__contributor
                             %span.contributor 投稿者
-                            %p.name 
-                                = reco.user.name
+                            =link_to "/mypage/#{reco.user.id}" do
+                                %p.name 
+                                    = reco.user.name
                         .contents__recommended__contributor__time
                             = reco.created_at.strftime("%Y-%m-%d %H:%M")
                         .iine__button
