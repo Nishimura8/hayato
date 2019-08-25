@@ -14,13 +14,14 @@
                 = safe_join(@recommended.content.split("\n"), tag(:br))
         .main__image
             = image_tag @recommended.image.url,size: "840x450"
-        .btn-box
-            .edit-btn 
-                = link_to edit_recommended_path(@recommended.id) do
-                    編集する
-            .destroy-btn
-                = link_to recommended_path(@recommended.id),method: :delete do
-                    削除する
+        - if user_signed_in? && current_user.id == @recommended.user.id
+            .btn-box
+                .edit-btn 
+                    = link_to edit_recommended_path(@recommended.id) do
+                        編集する
+                .destroy-btn
+                    = link_to recommended_path(@recommended.id),method: :delete do
+                        削除する
         = render partial: 'recommended/recommendeds'
         %div
             %h4.user-comment コメント

@@ -20,6 +20,9 @@ class RecommendedController < ApplicationController
 
 
   def edit
+    if @recommended.user_id != current_user.id
+        redirect_to root_path
+    end
     @recommended = Recommended.find(params[:id])
   end
 
