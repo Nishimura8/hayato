@@ -16,13 +16,10 @@
             = image_tag @recommended.image.url,size: "840x450"
         = render partial: 'recommended/recommendeds'
         %div
-            %h4 コメント
+            %h4.user-comment コメント
             #comments_area
-                / #①
-                / 投稿されたコメント一覧をブログの詳細ページに表示するためのrender
                 = render partial: 'comments/index', locals: { comments: @comments }
             - if user_signed_in?
-                / コメント入力欄をブログの詳細ページに表示するためのrender
                 = render partial: 'comments/form', locals: { comment: @comment, post: @recommended }
                 %div
                     = link_to "お気に入りに追加する",recommended_add_path(@recommended.id), method: :post

@@ -1,0 +1,6 @@
+= form_with(model: [post, comment] ) do |form|
+  .comments-box
+    %div
+      = form.text_area :content
+    .action
+      = form.submit "コメントをする",class: "submit"
