@@ -8,15 +8,11 @@ class ClipsController < ApplicationController
        redirect_to root_path if @recommended2.user_id != current_user.id
     end
 
-    def create
-
-   
+    def create   
         @user_id = current_user.id
-        @clip = Clip.new(recommended_id: @recommended.id, user_id: @user_id)
-    
-    
+        @clip = Clip.new(recommended_id: @recommended.id, user_id: @user_id)   
           if @clip.save
-            redirect_to root_path
+            redirect_to "/favorite/#{current_user.id}"
           end
     
       end
@@ -24,7 +20,7 @@ class ClipsController < ApplicationController
       def destroy
         @clip = current_user.clips.find_by(recommended_id: @recommended.id)
         if @clip.destroy
-          redirect_to root_path
+          redirect_to "/favorite/#{current_user.id}"
         end
       end
       
