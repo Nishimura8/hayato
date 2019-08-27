@@ -2,8 +2,10 @@ class ClipsController < ApplicationController
     before_action :set,only: :create
     before_action :set2,only: :destroy
     def index
+       @recommended2 = Recommended.find(params[:id])
        @recommended = current_user.recommendeds.order("created_at DESC").page(params[:page]).per(9)
        @user =current_user.name
+       redirect_to root_path if @recommended2.user_id != current_user.id
     end
 
     def create
@@ -26,6 +28,7 @@ class ClipsController < ApplicationController
         end
       end
       
+      private
       def set
         @recommended = Recommended.find(params[:recommended_id])
       end
