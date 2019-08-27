@@ -350,8 +350,8 @@ margin-right:42px;
 }
 .favorite-box{
   position:relative;
-  right:40px;
-  top:50px;
+  top: 31px;
+  right: 44px;
   a{
     color:black;
   }
@@ -408,5 +408,19 @@ margin-right:42px;
     .fa {
       font-size:17px;
     }
+  }
+}
+.main-post__container__submit__back2{
+  margin: 0 auto;
+  width: 50px;
+  text-decoration: none;
+  border: 2px solid #7a8996;
+  padding: 10px 40px;
+  background-color: #7a8996;
+  color: white;
+  margin-top: 10px;
+  text-align:center;
+  a{
+    color:white;
   }
 }

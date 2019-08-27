@@ -29,6 +29,10 @@
                 = render partial: 'comments/index', locals: { comments: @comments }
             - if user_signed_in?
                 = render partial: 'comments/form', locals: { comment: @comment, post: @recommended }
+                .mm
+                    =link_to  root_path, class:"back" do
+                        .main-post__container__submit__back2
+                            戻る
                 .favorite-box
                     .append
                         = link_to "お気に入りに追加する",recommended_add_path(@recommended.id), method: :post
