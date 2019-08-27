@@ -1,6 +1,10 @@
 .wrapper
     = render "recommended/header"
     .main-contents2
+        = form_tag  root_path, :method => 'get' do
+            %p.search
+                = text_field_tag :search, params[:search]
+                = submit_tag "Search", :name => nil,class: 'search__btn'
         .contents
             - @recommended.each do |reco|
                 .contents__recommended

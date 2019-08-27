@@ -10,4 +10,9 @@ class Recommended < ApplicationRecord
     has_many :clips
     has_many :users, through: :clips
     belongs_to_active_hash :category
+
+    def self.search(search)
+        return Recommended.all unless search
+        Recommended.where(['title LIKE ?', "%#{search}%"])
+      end
 end
