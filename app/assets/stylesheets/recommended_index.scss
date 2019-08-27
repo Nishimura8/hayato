@@ -34,30 +34,36 @@
         top:30px;
         right:120px;
         .login{
-            color:#66aff3;
+            background: #0d488e;
+            color:white;
             padding: 8px 20px;
             font-size: 14px;
-            border: 2px solid #66aff3;
+            border: 1px solid #eee;
             font-weight: bold;
             text-align: center;
             border-radius: 3px;
             display: inline-block;
             margin-right:20px;
-
+        }
+        .login:hover{
+            background: #afc6e2;
         }
         .logout{
-            color:#66aff3;
+            border: 1px solid #eee;
+            color:white;
             padding: 8px 20px;
             font-size: 14px;
-            border: 2px solid #66aff3;
+            background: #0d488e;
             font-weight: bold;
             text-align: center;
             border-radius: 3px;
             display: inline-block;
         }
+        .logout:hover{
+            background: #afc6e2;
+        }
     }
 }
-
 .account-page__inner.clearfix{
     // margin-top:160px;
 }
@@ -129,10 +135,11 @@ a{
 .post{
     font-weight:bold;
     &__btn{
-    color:#66aff3;
+    background: #0d488e;
+    color:white;
     padding: 8px 20px;
     font-size: 14px;
-    border: 2px solid #66aff3;
+    border: 1px solid white;
     font-weight: bold;
     text-align: center;
     border-radius: 3px;
@@ -141,6 +148,9 @@ a{
     position: absolute;
     top: 30px;
     left: 120px;
+    }
+    &__btn:hover{
+        background: #afc6e2;
     }
 }
 .like-link{

@@ -251,16 +251,23 @@
 
   }
 }
+.favorite:hover{
+  background: #afc6e2;
+}
 .favorite{
-  color: #66aff3;
+  color: white;
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #66aff3;
+  border: 1px solid white;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
   display: inline-block;
+  background: #0d488e;
   margin-right: 20px;
+  .favorite:hover{
+    background: #afc6e2;
+  }
 }
 #recommended_category_id{
   position: relative;
