@@ -27,3 +27,7 @@
                             = reco.category.name
     .page
         = paginate(@recommended)
+    -# - if user_signed_in? && current_user.id == @user.id
+    -#     .user-delete
+    -#         =link_to  user_registration_path,method: :delete do
+    -#             .destroy 解約する
