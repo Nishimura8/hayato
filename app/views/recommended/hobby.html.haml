@@ -2,6 +2,11 @@
     = render "recommended/header"
     .main-contents2
         .contents
+            = form_tag  hobby_path, :method => 'get' do
+                %p.search
+                    = text_field_tag :search, params[:search],placeholder: "記事を検索する" 
+                    %button{:type => "submit",class: "search-btn"}
+                        %i.fa.fa-search
             - @recommended.each do |reco|
                 .contents__recommended
                     .img-box

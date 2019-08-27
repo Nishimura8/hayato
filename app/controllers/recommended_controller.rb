@@ -53,45 +53,44 @@ class RecommendedController < ApplicationController
     end
     
     def sports
-        @recommended = Recommended.where(category_id: 1).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 1).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def travel
-        @recommended = Recommended.where(category_id: 2).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 2).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def chat
-        @recommended = Recommended.where(category_id: 3).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 3).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def fashion
-        @recommended = Recommended.where(category_id: 4).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 4).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def entertainment
-        @recommended = Recommended.where(category_id: 5).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 5).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def life
-        @recommended = Recommended.where(category_id: 6).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 6).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def love
-        @recommended = Recommended.where(category_id: 7).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 7).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def gourmet
-        @recommended = Recommended.where(category_id: 8).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 8).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def hobby
-        @recommended = Recommended.where(category_id: 9).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 9).order("created_at DESC").page(params[:page]).per(9)
     end
 
     def game
-        @recommended = Recommended.where(category_id: 10).order("created_at DESC").order("created_at DESC").page(params[:page]).per(9)
+        @recommended= Recommended.search(params[:search]).where(category_id: 10).order("created_at DESC").page(params[:page]).per(9)
     end
-
         
 
 
