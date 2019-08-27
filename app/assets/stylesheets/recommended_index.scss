@@ -76,6 +76,9 @@ a{
     width:1200px;
     margin:0 auto;
     padding-top:50px;
+    form{
+        height:0px;
+    }
     &__recommended{
         font-size:14px;
         background-color:white;
