@@ -43,8 +43,8 @@ class RecommendedController < ApplicationController
   end
     def show
         @user = @recommended.user
-        @comment = Comment.new #①
-        @comments = @recommended.comments #②
+        @comment = Comment.new 
+        @comments = @recommended.comments 
     end
 
     def mypage

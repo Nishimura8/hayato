@@ -380,17 +380,26 @@ margin-right:42px;
 .search{
   text-align:center;
   position:relative;
-  top:45px;
+  top: 48px;
   #search{
-    width:600px;
+    padding-left: 10px;
+    width:300px;
     background: #f5f5f5;
     border-radius: 4px;
-    padding: 0 42px 0 10px;
-    height: 40px;
     -webkit-transition: all ease-out .3s;
     transition: all ease-out .3s;
+    height: 30px;
+    font-size: 13px;
   }
-  &__btn{
-        
+  .search-btn{
+    position:relative;
+    right:35px;
+    background-color:#f5f5f5;
+    border: none;
+    padding:0;
+    top: 2px;
+    .fa {
+      font-size:17px;
+    }
   }
 }

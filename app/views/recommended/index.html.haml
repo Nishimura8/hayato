@@ -4,7 +4,10 @@
         = form_tag  root_path, :method => 'get' do
             %p.search
                 = text_field_tag :search, params[:search]
-                = submit_tag "Search", :name => nil,class: 'search__btn'
+                %button{:type => "submit",class: "search-btn"  }
+                    %i.fa.fa-search
+
+
         .contents
             - @recommended.each do |reco|
                 .contents__recommended
