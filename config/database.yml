@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: hayato_production
-  username: hayato
-  password: <%= ENV['HAYATO_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
