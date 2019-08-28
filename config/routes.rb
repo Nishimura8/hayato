@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get '/game' => 'recommended#game'
   resources :clips, only: [:destroy]
   get '/mypage/:id',to: "recommended#mypage"
-  get '/favorite/:id',to: "clips#index"
+  get '/favorite/:id',to: "recommended#favorite"
 end
