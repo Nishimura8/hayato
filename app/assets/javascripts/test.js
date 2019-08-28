@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
     var nav = $('.nav');
     $('li', nav)
     .mouseover(function(e) {
@@ -7,4 +7,4 @@ $(function() {
     .mouseout(function(e) {
     $('ul', this).stop().slideUp('fast');
     });
-    });
+});
