@@ -13,7 +13,7 @@
             %p.item-description-inner 
                 = safe_join(@recommended.content.split("\n"), tag(:br))
         .main__image
-            = image_tag @recommended.image.url,size: "840x450"
+            = image_tag @recommended.image, size: "840x450"
         - if user_signed_in? && current_user.id == @recommended.user.id
             .btn-box
                 = link_to edit_recommended_path(@recommended.id),class: 'edit-btn2' do

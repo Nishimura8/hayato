@@ -12,7 +12,7 @@
                     .img-box
                         %div{"data-links" => "false"}
                             = link_to recommended_path(reco.id) do
-                                =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
+                                = image_tag reco.image, size: "380x210", class: 'lower-message__image' 
                     .contents__recommended__title
                         %p.title 
                             = reco.title
