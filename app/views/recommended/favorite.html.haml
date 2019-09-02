@@ -2,25 +2,22 @@
     = render "recommended/header"
     .main-contents2
         .contents
-            = form_tag  root_path, :method => 'get' do
-                %p.search
-                    = text_field_tag :search, params[:search],placeholder: "記事を検索する" 
-                    %button{:type => "submit",class: "search-btn"}
-                        %i.fa.fa-search
+            .aa
+                = @user
+                .p
+                さんのお気に入り一覧
             - @recommended.each do |reco|
                 .contents__recommended
                     .img-box
-                        %div{"data-links" => "false"}
-                            = link_to recommended_path(reco.id) do
-                                =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
+                        = link_to recommended_path(reco.id) do
+                            =  image_tag reco.image.url, size: "380x210", class: 'lower-message__image' if reco.image.present?
                     .contents__recommended__title
                         %p.title 
                             = reco.title
                         .contents__recommended__contributor
                             %span.contributor 投稿者
-                            =link_to "/mypage/#{reco.user.id}" do
-                                %p.name 
-                                    = reco.user.name
+                            %p.name 
+                                = reco.user.name
                         .contents__recommended__contributor__time
                             = reco.created_at.strftime("%Y-%m-%d %H:%M")
                         .iine__button
@@ -30,5 +27,3 @@
                             = reco.category.name
     .page
         = paginate(@recommended)
-
-                    

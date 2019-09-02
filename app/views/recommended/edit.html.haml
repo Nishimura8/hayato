@@ -24,4 +24,5 @@
           %h3.main-post__container__submit__sub
             = f.submit "投稿する",class: "btn2"
             .main-post__container__submit__back
-              =link_to '戻る', root_path, class:"back"
+              %div{"data-links" => "false"}
+                =link_to '戻る', root_path, class:"back"

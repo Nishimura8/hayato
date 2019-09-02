@@ -16,11 +16,11 @@
             = image_tag @recommended.image.url,size: "840x450"
         - if user_signed_in? && current_user.id == @recommended.user.id
             .btn-box
-                .edit-btn 
-                    = link_to edit_recommended_path(@recommended.id) do
-                        編集する
-                .destroy-btn
-                    = link_to recommended_path(@recommended.id),method: :delete do
+                = link_to edit_recommended_path(@recommended.id),class: 'edit-btn2' do
+                    .edit-btn 
+                        %p編集する
+                = link_to recommended_path(@recommended.id),class: 'destroy-btn2',method: :delete do
+                    .destroy-btn
                         削除する
         = render partial: 'recommended/recommendeds'
         %div

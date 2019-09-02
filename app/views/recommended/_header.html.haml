@@ -1,8 +1,9 @@
 .header
     .header__parent
         .header__parent__title
-            =link_to root_path do
-                %p.title My daily life
+            %div{"data-links" => "false"}
+                =link_to root_path do
+                    %p.title My daily life
             - if user_signed_in?
                 .sign_in
                     =link_to "/favorite/#{current_user.id}",method: :get do

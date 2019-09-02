@@ -92,15 +92,6 @@ class RecommendedController < ApplicationController
         @recommended= Recommended.search(params[:search]).where(category_id: 10).order("created_at DESC").page(params[:page]).per(9)
     end
 
-    def favorite
-        @recommended2 = Recommended.find(params[:id])
-        @recommended = current_user.recommendeds.order("created_at DESC").page(params[:page]).per(9)
-        @user =current_user.name
-        redirect_to root_path if @recommended2.user_id != current_user.id
-     end
-        
-
-
 
     private
     def set_recommended
